@@ -11,16 +11,23 @@ export const style = makeStyles(theme => ({
         marginRight: theme.spacing(2),
     },
     title: {
-        flexGrow: 1,
         display: 'none',
         [theme.breakpoints.up('sm')]: {
             display: 'block',
         },
     },
+    Toolbar: {
+        backgroundColor: APP_COLORS.dark,
+    },
+    showAll: {
+        display: 'flex',
+        justifyContent: 'center',
+        flex: '1',
+    },
     search: {
         position: 'relative',
         borderRadius: theme.shape.borderRadius,
-       
+
         marginLeft: 0,
         width: '100%',
         [theme.breakpoints.up('sm')]: {

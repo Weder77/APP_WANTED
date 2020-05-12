@@ -1,4 +1,3 @@
-
 import React from 'react';
 import Button from '@material-ui/core/Button';
 import CssBaseline from '@material-ui/core/CssBaseline';
@@ -29,7 +28,7 @@ const RegisterPage = () => {
                     </div>
                     <Typography component="h1" variant="h5">
                         Inscription
-          </Typography>
+                    </Typography>
                     <form className={classes.form} noValidate>
                         <TextField
                             type="mail"
@@ -99,7 +98,7 @@ const RegisterPage = () => {
                             className={classes.submit}
                         >
                             S'inscrire
-            </Button>
+                        </Button>
                         <Grid container>
 
                             <Grid item>
