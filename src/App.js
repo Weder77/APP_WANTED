@@ -6,8 +6,6 @@ import {
 } from "react-router-dom";
 import Hidden from '@material-ui/core/Hidden';
 import Menu from './components/Menu';
-import RegisterPage from './pages/RegisterPage';
-import LoginPage from './pages/LoginPage';
 import HomePage from './pages/HomePage';
 import AllMonsters from './pages/Monsters';
 
@@ -15,15 +13,7 @@ import AllMonsters from './pages/Monsters';
 
 const routes = [
   {
-    path: "/register",
-    main: () => <RegisterPage />
-  },
-  {
-    path: "/login",
-    main: () => <LoginPage />
-  },
-  {
-    path: "/home",
+    path: "/",
     main: () => <HomePage />
   },
   {
