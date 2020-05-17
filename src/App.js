@@ -7,18 +7,18 @@ import {
 import Hidden from '@material-ui/core/Hidden';
 import Menu from './components/Menu';
 import HomePage from './pages/HomePage';
-import AllMonsters from './pages/Monsters';
+import Monsters from './pages/Monsters';
 
 
 
 const routes = [
   {
-    path: "/",
+    path: "/home",
     main: () => <HomePage />
   },
   {
     path: "/monsters",
-    main: () => <AllMonsters />
+    main: () => <Monsters />
   },
 ];
 
