@@ -9,6 +9,8 @@ import Menu from './components/Menu';
 import RegisterPage from './pages/RegisterPage';
 import LoginPage from './pages/LoginPage';
 import HomePage from './pages/HomePage';
+import AllMonsters from './pages/Monsters';
+
 
 
 const routes = [
@@ -23,6 +25,10 @@ const routes = [
   {
     path: "/home",
     main: () => <HomePage />
+  },
+  {
+    path: "/monsters",
+    main: () => <AllMonsters />
   },
 ];
 
