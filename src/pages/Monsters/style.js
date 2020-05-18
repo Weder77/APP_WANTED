@@ -11,8 +11,12 @@ export const style = makeStyles(theme => ({
     width: '100%',
     textAlign: 'center',
   },
+  flex: {
+    display: 'flex',
+    flex: 'wrap',
+  },
   img: {
-    width: '15%',
+    width: '70%',
   },
   localisation: {
     marginBottom: '2%',
@@ -23,8 +27,11 @@ export const style = makeStyles(theme => ({
     display: 'flex',
     height: 600,
   },
-  description : {
-    marginBottom: '5%',
+  description: {
+    marginBottom: 50,
+  },
+  astuce: {
+
   },
   tabs: {
     borderRight: `1px solid ${theme.palette.divider}`,
@@ -32,9 +39,12 @@ export const style = makeStyles(theme => ({
   bold: {
     fontWeight: 'bold'
   },
+  level: {
+    fontStyle: 'italic',
+  },
   picto: {
-    width: '5%',
-    marginRight: 10,
+    width: 22,
+    marginRight: 5,
   },
   boxRes: {
     width: '100%',
@@ -45,9 +55,27 @@ export const style = makeStyles(theme => ({
     justifyContent: 'center',
     alignItems: 'center',
     textAlign: 'center',
-    fontSize: 24,
+    fontSize: 22,
   },
   carac: {
-    display: 'block'
+    display: 'block',
+  },
+  sorts: {
+    marginBottom: 30,
+  },
+  number: {
+    marginRight: 10,
+  },
+  secondBox: {
+    padding: 50,
+    textAlign: 'left',
+  },
+  firstBox: {
+    border: 'solid grey',
+    borderRadius: 20,
+    width: '30%',
+  },
+  title: {
+    textAlign: 'center',
   }
 }));
