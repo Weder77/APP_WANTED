@@ -17,7 +17,7 @@ const routes = [
     main: () => <HomePage />
   },
   {
-    path: "/monsters",
+    path: "/allmonsters",
     main: () => <Monsters />
   },
 ];

@@ -18,7 +18,7 @@ const Menu = ({ main }) => {
             Dofus - Avis de recherche
           </Typography>
           <div className={classes.showAll}>
-            <a href="/monsters"><Button variant="contained" className={classes.showAllButton} >Tous les avis</Button></a>
+            <a href="/allmonsters"><Button variant="contained" className={classes.showAllButton} >Tous les avis</Button></a>
           </div>
           <div className={classes.search}>
             <div className={classes.searchIcon}>
