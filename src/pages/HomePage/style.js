@@ -1,6 +1,4 @@
 import { makeStyles } from '@material-ui/core/styles';
-import { APP_COLORS } from '../../colors';
-
 
 export const style = makeStyles(theme => ({
     paper: {

@@ -1,8 +1,6 @@
 import { makeStyles } from '@material-ui/core/styles';
 import { APP_COLORS } from '../../colors';
 
-const drawerWidth = 240;
-
 export const style = makeStyles(theme => ({
     root: {
         flexGrow: 1,

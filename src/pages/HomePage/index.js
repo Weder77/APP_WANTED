@@ -3,7 +3,6 @@ import Paper from '@material-ui/core/Paper';
 import Container from '@material-ui/core/Container';
 import Grid from '@material-ui/core/Grid';
 import Link from '@material-ui/core/Link';
-
 import { style } from './style';
 
 const HomePage = () => {
@@ -36,7 +35,7 @@ const HomePage = () => {
                 </Grid>
                 <Grid item xs={6}>
                     <Link href="#" underline="none">
-                        <Paper className={[classes.paper, classes.areaContainer, , classes.bonta]}>
+                        <Paper className={[classes.paper, classes.areaContainer, classes.bonta]}>
                             <div>Bonta</div>
                             <div>[-33, -56]</div>
                         </Paper>
