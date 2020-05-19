@@ -45,6 +45,15 @@ function a11yProps(index) {
   };
 }
 
+function allmonsters() {
+  fetch("http://localhost:8000/api/monsters/")
+    .then(resp => resp.json())
+    .then(
+      (result) => {
+        console.log(result)
+      }
+    )
+}
 
 const Monsters = () => {
   const classes = style();
@@ -54,6 +63,8 @@ const Monsters = () => {
   const handleChange = (event, newValue) => {
     setValue(newValue);
   };
+
+  allmonsters();
 
   return (
     <div className={classes.box}>
