@@ -7,6 +7,7 @@ export const style = makeStyles(theme => ({
         padding: theme.spacing(2),
         textAlign: 'center',
         color: theme.palette.text.secondary,
+        fontSize: '17px',
     },
     mainContainer: {
         paddingTop: '0.5em',
@@ -14,19 +15,24 @@ export const style = makeStyles(theme => ({
     },
     welcomeText: {
         boxShadow: 'none',
+        fontWeight: 'bold',
+        fontSize: '20px',
+    },
+    subtextWelcome: {
+        fontSize: '16px',
         fontWeight: '500',
-        fontSize: '18px',
     },
     areaContainer: {
         height: '140px',
         display: 'flex',
+        flexDirection: 'column',
         justifyContent: 'center',
         alignItems: 'center',
         background: 'center no-repeat',
         backgroundSize: 'cover',
         fontWeight: 'bold',
-        color: APP_COLORS.dark,
-        textShadow: '1px 0 0 #fff, -1px 0 0 #fff, 0 1px 0 #fff, 0 -1px 0 #fff',
+        color: "white",
+        textShadow: '2px 2px 8px black',
     },
     astrub: {
         backgroundImage: "linear-gradient(to right bottom,rgba(255, 243, 224, 0.6),rgba(255, 204, 128, 0.4)), url('./astrub.jpg')",

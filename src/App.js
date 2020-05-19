@@ -13,7 +13,7 @@ import Monsters from './pages/Monsters';
 
 const routes = [
   {
-    path: "/home",
+    path: "/index",
     main: () => <HomePage />
   },
   {

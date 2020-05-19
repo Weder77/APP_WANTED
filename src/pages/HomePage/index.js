@@ -13,33 +13,40 @@ const HomePage = () => {
         <Container maxWidth="lg" className={classes.mainContainer}>
             <Grid container spacing={3}>
                 <Grid item xs={12}>
-                    <Paper className={[ classes.paper, classes.welcomeText ]}>Bienvenue sur DofusWanted !</Paper>
+                    <Paper className={[ classes.paper, classes.welcomeText ]}>
+                        <div>Bienvenue sur DofusWanted !</div>
+                        <div className={classes.subtextWelcome}>Selectionnez la zone de l'avis souhaité</div>
+                    </Paper>
                 </Grid>
                 <Grid item xs={6} className={classes.test}>
                     <Link href="#" underline="none">
                         <Paper className={[classes.paper, classes.areaContainer, classes.astrub]}>
-                            Astrub
+                                <div>Astrub</div> 
+                                <div>[5,-19]</div>
                         </Paper>
                     </Link>
                 </Grid>
                 <Grid item xs={6}>
                     <Link href="#" underline="none">
                         <Paper className={[classes.paper, classes.areaContainer, classes.amakna]}>
-                            Amakna
+                            <div>Amakna</div>
+                            <div>[5,-6] ou [4,4]</div>
                         </Paper>
                     </Link>
                 </Grid>
                 <Grid item xs={6}>
                     <Link href="#" underline="none">
                         <Paper className={[classes.paper, classes.areaContainer, , classes.bonta]}>
-                            Bonta
+                            <div>Bonta</div>
+                            <div>[-33, -56]</div>
                         </Paper>
                     </Link>
                 </Grid>
                 <Grid item xs={6}>
                     <Link href="#" underline="none">
                         <Paper className={[classes.paper, classes.areaContainer, classes.brakmar]}>
-                            Brâkmar
+                            <div>Brâkmar</div>
+                            <div>[-26, 36]</div>
                         </Paper>
                     </Link>
                 </Grid>
@@ -53,21 +60,24 @@ const HomePage = () => {
                 <Grid item xs={6}>
                     <Link href="#" underline="none">
                         <Paper className={[classes.paper, classes.areaContainer, classes.sufokia]}>
-                            Sufokia
+                            <div>Sufokia</div>
+                            <div>[23,24]</div>
                         </Paper>
                     </Link>
                 </Grid>
                 <Grid item xs={6}>
                     <Link href="#" underline="none">
                         <Paper className={[classes.paper, classes.areaContainer, classes.frigost]}>
-                            Frigost
+                            <div>Frigost</div>
+                            <div>[-76,-42],  [-75,-74], [-68,-76]</div>
                         </Paper>
                     </Link>
                 </Grid>
                 <Grid item xs={6}>
                     <Link href="#" underline="none">
                         <Paper className={[classes.paper, classes.areaContainer, classes.saharach]}>
-                            Saharach
+                            <div>Saharach</div>
+                            <div>[15,-57]</div>
                         </Paper>
                     </Link>
                 </Grid>
