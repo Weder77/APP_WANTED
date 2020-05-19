@@ -1,4 +1,5 @@
 import React from 'react';
+import {Link} from 'react-router-dom';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import Button from '@material-ui/core/Button';
@@ -7,7 +8,7 @@ import InputBase from '@material-ui/core/InputBase';
 import SearchIcon from '@material-ui/icons/Search';
 import { style } from './style';
 
-const Menu = ({ main }) => {
+const Menu = () => {
   const classes = style();
 
   return (
@@ -18,7 +19,7 @@ const Menu = ({ main }) => {
             Dofus - Avis de recherche
           </Typography>
           <div className={classes.showAll}>
-            <a href="/allmonsters"><Button variant="contained" className={classes.showAllButton} >Tous les avis</Button></a>
+            <Link to="/allmonsters"><Button variant="contained" className={classes.showAllButton} >Tous les avis</Button></Link>
           </div>
           <div className={classes.search}>
             <div className={classes.searchIcon}>
