@@ -10,11 +10,8 @@ import MonsterDescription from '../../components/MonsterDescription'
 import { style } from './style';
 // icons
 
-
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
-
-
   return (
     <div
       role="tabpanel"
@@ -45,33 +42,82 @@ function a11yProps(index) {
   };
 }
 
-const allmonsters = (page) => {
-  let url = "http://localhost:8000/api/monsters?page=" + page
+const ApiCall = (param, page) => {
+  const [result, setResult] = React.useState([]);
+  let url
+  if (page == undefined || page == null) {
+    url = "http://localhost:8000" + param
+  } else { 
+    url = "http://localhost:8000" + param + "?page=" + page 
+  }
 
   fetch(url, {
     method: 'get',
     headers: new Headers({
-      'Accept' : 'application/json'
+      'Accept': 'application/json'
     })
   })
     .then(resp => resp.json())
     .then(
-      (result) => {
-        console.log(result)
+      (res) => {
+        setResult(res)
       }
     )
+
+  return result
+}
+
+const MonstersName = (page) => {
+  const monsters = ApiCall('/api/monsters', page)
+
+  return (
+    monsters.map((monster, index) =>
+      <Tab label={monsters[index].name} {...a11yProps(0)} />
+    )
+  )
+}
+
+const MonstersStats = (page, value, classes) => {
+  const monsters = ApiCall('/api/monsters', page)
+  console.log(monsters)
+
+  return (
+    monsters.map((monster, index) =>
+      <TabPanel value={value} index={index} className={classes.parent}>
+        <div className={classes.flex}>
+          <MonsterCard
+            name={monsters[index].name}
+            position={monsters[index].position}
+            level={monsters[index].level}
+            img={monsters[index].imgUrl}
+            loc={monsters[index].area}
+            health={monsters[index].pv}
+            actionPoints={monsters[index].pa}
+            movementPoints={monsters[index].pm}
+            resfeu={monsters[index].resTerre}
+            reseau={monsters[index].resAir}
+            resterre={monsters[index].resFeu}
+            resair={monsters[index].resEau}
+            resneutre={monsters[index].resNeutre}
+          />
+          <MonsterDescription
+            pos={monsters[index].position}
+          />
+        </div>
+      </TabPanel>
+    )
+  )
 }
 
 const Monsters = () => {
-  const classes = style();
+  const classes = style()
+  const page = 1
 
-  const [value, setValue] = React.useState(0);
+  const [value, setValue] = React.useState(0)
 
   const handleChange = (event, newValue) => {
     setValue(newValue);
   };
-
-  allmonsters(1);
 
   return (
     <div className={classes.box}>
@@ -84,27 +130,12 @@ const Monsters = () => {
           aria-label="Vertical tabs example"
           className={classes.tabs}
         >
-          <Tab label="Fouduglen l'Écureuil" {...a11yProps(0)} />
-
+          {MonstersName(page)}
         </Tabs>
-
-
-
-
-        <TabPanel value={value} index={0} className={classes.parent}>
-          <div className={classes.flex}>
-            <MonsterCard name='coucou' level='21' img='oui' loc='ui' health='500' actionPoints='5' movementPoints='5' resfeu='5' resea='5' resterre='5' resair='5' resneutre='4' />
-            <MonsterDescription />
-          </div>
-        </TabPanel>
-
-
-
-
+        {MonstersStats(page, value, classes)}
       </div>
     </div>
   );
-
 }
 
 export default Monsters;

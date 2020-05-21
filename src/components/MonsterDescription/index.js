@@ -1,16 +1,16 @@
 import React from 'react';
-
-
 import { style } from './style';
 
-const MonsterDescription = () => {
+const MonsterDescription = ({pos}) => {
     const classes = style();
-
 
     return (
         <div className={classes.secondBox}>
             <h2 className={classes.title}>Sorts, description et astuces</h2>
             <div className={classes.sorts}>
+                <p>
+                    <span className={classes.bold}>L'avis de rechercher se recupère en : </span>{pos}
+                </p>
                 <p>
                     <span className={classes.bold}>Casse-noisettes : </span> De 1 à 6PO, modifiable. Retire tout type d'invulnérabilité à sa cible et lui inflige 10% de ses points de vie dans l'état Neutre. Inflige également de faibles dommages dans l'élément Terre.
                 </p>
