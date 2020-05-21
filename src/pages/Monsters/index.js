@@ -45,8 +45,15 @@ function a11yProps(index) {
   };
 }
 
-function allmonsters() {
-  fetch("http://localhost:8000/api/monsters/")
+const allmonsters = (page) => {
+  let url = "http://localhost:8000/api/monsters?page=" + page
+
+  fetch(url, {
+    method: 'get',
+    headers: new Headers({
+      'Accept' : 'application/json'
+    })
+  })
     .then(resp => resp.json())
     .then(
       (result) => {
@@ -64,7 +71,7 @@ const Monsters = () => {
     setValue(newValue);
   };
 
-  allmonsters();
+  allmonsters(1);
 
   return (
     <div className={classes.box}>
