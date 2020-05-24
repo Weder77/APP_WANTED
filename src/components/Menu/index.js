@@ -20,9 +20,11 @@ const Menu = () => {
               Dofus - Avis de recherche
             </Link>
           </Typography>
+
           <div className={classes.showAll}>
-            <Link to="/allmonsters"><Button variant="contained" className={classes.showAllButton} >Tous les avis</Button></Link>
+            <Link to="/monsters" className={classes.link}><Button variant="contained" className={classes.showAllButton} >Tous les avis</Button></Link>
           </div>
+
           {/* <div className={classes.search}>
             <div className={classes.searchIcon}>
               <SearchIcon />
