@@ -3,7 +3,7 @@ import React from 'react';
 const ApiCall = (param) => {
     const [result, setResult] = React.useState([]);
     let url = "http://localhost:8000" + param
-
+    
     React.useEffect(() => {
         fetch(url, {
             method: 'get',

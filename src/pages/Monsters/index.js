@@ -43,8 +43,8 @@ function a11yProps(index) {
   };
 }
 
-const MonstersName = () => {
-  const monsters = ApiCall('/api/monsters')
+const MonstersName = (request) => {
+  const monsters = ApiCall(request)
 
   return (
     monsters.map((monster, index) =>
@@ -53,8 +53,8 @@ const MonstersName = () => {
   )
 }
 
-const MonstersStats = (value, classes) => {
-  const monsters = ApiCall('/api/monsters')
+const MonstersStats = (value, classes, request) => {
+  const monsters = ApiCall(request)
 
   return (
     monsters.map((monster, index) =>
@@ -86,7 +86,7 @@ const MonstersStats = (value, classes) => {
   )
 }
 
-const Monsters = () => {
+const Monsters = ({request}) => {
   const classes = style()
 
   const [value, setValue] = React.useState(0)
@@ -106,9 +106,9 @@ const Monsters = () => {
           aria-label="Vertical tabs example"
           className={classes.tabs}
         >
-          {MonstersName()}
+          {MonstersName(request)}
         </Tabs>
-        {MonstersStats(value, classes)}
+        {MonstersStats(value, classes,request)}
       </div>
     </div>
   );

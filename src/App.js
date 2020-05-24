@@ -17,8 +17,8 @@ const routes = [
     main: () => <HomePage />
   },
   {
-    path: "/allmonsters",
-    main: () => <Monsters />
+    path: "/monsters",
+    main: () => <Monsters request={'/api/monsters'}/>
   },
 ];
 
