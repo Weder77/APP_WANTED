@@ -47,8 +47,8 @@ const ApiCall = (param, page) => {
   let url
   if (page == undefined || page == null) {
     url = "http://localhost:8000" + param
-  } else { 
-    url = "http://localhost:8000" + param + "?page=" + page 
+  } else {
+    url = "http://localhost:8000" + param + "?page=" + page
   }
 
   fetch(url, {
@@ -79,7 +79,7 @@ const MonstersName = (page) => {
 
 const MonstersStats = (page, value, classes) => {
   const monsters = ApiCall('/api/monsters', page)
-  console.log(monsters)
+
 
   return (
     monsters.map((monster, index) =>
@@ -102,6 +102,8 @@ const MonstersStats = (page, value, classes) => {
           />
           <MonsterDescription
             pos={monsters[index].position}
+            doplon={monsters[index].description.slice(monsters[index].description.indexOf(":") + 1, monsters[index].description.indexOf("."))}
+            desc={monsters[index].description.slice(monsters[index].description.indexOf(".") + 1)}
           />
         </div>
       </TabPanel>
