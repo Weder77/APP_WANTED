@@ -6,6 +6,7 @@ import Typography from '@material-ui/core/Typography';
 import Box from '@material-ui/core/Box';
 import MonsterCard from '../../components/MonsterCard'
 import MonsterDescription from '../../components/MonsterDescription'
+import ApiCall from '../../components/ApiCall'
 
 import { style } from './style';
 // icons
@@ -42,33 +43,8 @@ function a11yProps(index) {
   };
 }
 
-const ApiCall = (param, page) => {
-  const [result, setResult] = React.useState([]);
-  let url
-  if (page == undefined || page == null) {
-    url = "http://localhost:8000" + param
-  } else {
-    url = "http://localhost:8000" + param + "?page=" + page
-  }
-
-  fetch(url, {
-    method: 'get',
-    headers: new Headers({
-      'Accept': 'application/json'
-    })
-  })
-    .then(resp => resp.json())
-    .then(
-      (res) => {
-        setResult(res)
-      }
-    )
-
-  return result
-}
-
-const MonstersName = (page) => {
-  const monsters = ApiCall('/api/monsters', page)
+const MonstersName = () => {
+  const monsters = ApiCall('/api/monsters')
 
   return (
     monsters.map((monster, index) =>
@@ -78,9 +54,8 @@ const MonstersName = (page) => {
 }
 
 const MonstersStats = (page, value, classes) => {
-  const monsters = ApiCall('/api/monsters', page)
-
-
+  const monsters = ApiCall('/api/monsters')
+  
   return (
     monsters.map((monster, index) =>
       <TabPanel value={value} index={index} className={classes.parent}>

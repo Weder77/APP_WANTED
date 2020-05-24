@@ -1,15 +1,21 @@
 import React from 'react';
 import Tooltip from '@material-ui/core/Tooltip';
 import { style } from './style';
+import ApiCall from '../ApiCall'
 
 const MonsterCard = ({ name, level, img, loc, health, actionPoints, movementPoints, resfeu, reseau, resterre, resair, resneutre }) => {
     const classes = style()
+
+    if (img.length == 0) {
+        img = require('./img/default.png')
+    }
+
     return (
         <div className={classes.firstBox}>
             <h2>{name} -<span className={classes.level}>lvl {level}</span></h2>
             <div className={classes.boxMonsters}>
                 <img alt='' className={classes.img} src={img} />
-                <div className={classes.localisation}>Localisation : {loc} </div>
+                <div className={classes.localisation}>Localisation : {ApiCall(loc).name} </div>
                 <div className={classes.boxRes}>
                     <div className={classes.column}>
                         <Tooltip title="Vitalité">
