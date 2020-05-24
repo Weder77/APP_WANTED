@@ -86,7 +86,7 @@ const MonstersStats = (value, classes, request) => {
   )
 }
 
-const Monsters = ({request}) => {
+const Monsters = ({request, type}) => {
   const classes = style()
 
   const [value, setValue] = React.useState(0)

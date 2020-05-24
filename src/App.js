@@ -8,6 +8,7 @@ import Hidden from '@material-ui/core/Hidden';
 import Menu from './components/Menu';
 import HomePage from './pages/HomePage';
 import Monsters from './pages/Monsters';
+import ApiTest from './pages/ApiTest'
 
 
 
@@ -19,6 +20,10 @@ const routes = [
   {
     path: "/monsters",
     main: () => <Monsters request={'/api/monsters'}/>
+  },
+  {
+    path: "/astrub",
+    main: () => <ApiTest request={'/api/positions/1'}/>
   },
 ];
 

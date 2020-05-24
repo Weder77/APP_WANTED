@@ -2,8 +2,8 @@ import React from 'react';
 import Paper from '@material-ui/core/Paper';
 import Container from '@material-ui/core/Container';
 import Grid from '@material-ui/core/Grid';
-import Link from '@material-ui/core/Link';
 import { style } from './style';
+import {Link} from 'react-router-dom';
 
 const HomePage = () => {
     const classes = style();
@@ -18,7 +18,7 @@ const HomePage = () => {
                     </Paper>
                 </Grid>
                 <Grid item xs={6} className={classes.test}>
-                    <Link href="#" underline="none">
+                    <Link to="/astrub" underline="none">
                         <Paper className={[classes.paper, classes.areaContainer, classes.astrub]}>
                                 <div>Astrub</div> 
                                 <div>[5,-19]</div>
