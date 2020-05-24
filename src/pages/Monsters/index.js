@@ -53,7 +53,7 @@ const MonstersName = () => {
   )
 }
 
-const MonstersStats = (page, value, classes) => {
+const MonstersStats = (value, classes) => {
   const monsters = ApiCall('/api/monsters')
 
   return (
@@ -88,7 +88,6 @@ const MonstersStats = (page, value, classes) => {
 
 const Monsters = () => {
   const classes = style()
-  const page = 1
 
   const [value, setValue] = React.useState(0)
 
@@ -107,9 +106,9 @@ const Monsters = () => {
           aria-label="Vertical tabs example"
           className={classes.tabs}
         >
-          {MonstersName(page)}
+          {MonstersName()}
         </Tabs>
-        {MonstersStats(page, value, classes)}
+        {MonstersStats(value, classes)}
       </div>
     </div>
   );
