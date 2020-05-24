@@ -5,7 +5,7 @@ import ApiCall from '../ApiCall'
 const MonsterDescription = ({ pos, doplon, desc }) => {
     const classes = style();
 
-    if (desc.length == 0) {
+    if (desc.length === 0) {
         desc = "Pas de description"
     }
 

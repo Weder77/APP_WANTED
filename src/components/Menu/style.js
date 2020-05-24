@@ -58,4 +58,8 @@ export const style = makeStyles(theme => ({
             },
         },
     },
+    link: {
+        textDecoration: 'none',
+        color: 'inherit'
+    }
 }));

@@ -6,7 +6,7 @@ import ApiCall from '../ApiCall'
 const MonsterCard = ({ name, level, img, loc, health, actionPoints, movementPoints, resfeu, reseau, resterre, resair, resneutre }) => {
     const classes = style()
 
-    if (img.length == 0) {
+    if (img.length === 0) {
         img = require('./img/default.png')
     }
 
