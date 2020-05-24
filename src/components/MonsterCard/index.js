@@ -19,21 +19,21 @@ const MonsterCard = ({ name, level, img, loc, health, actionPoints, movementPoin
                 <div className={classes.boxRes}>
                     <div className={classes.column}>
                         <Tooltip title="Vitalité">
-                            <p>
+                            <p className={classes.stats}>
                                 <img alt='' className={classes.picto} src={require('./img/vie.png')} />
                                 <span className={classes.number}>{health}</span>
                             </p>
                         </Tooltip>
 
                         <Tooltip title="Points d'actions">
-                            <p>
+                            <p className={classes.stats}>
                                 <img alt='' className={classes.picto} src={require('./img/pa.png')} />
                                 <span className={classes.number}>{actionPoints}</span>
                             </p>
                         </Tooltip>
 
                         <Tooltip title="Points de déplacement">
-                            <p>
+                            <p className={classes.stats}> 
                                 <img alt='' className={classes.picto} src={require('./img/pm.png')} />
                                 <span className={classes.number}>{movementPoints}</span>
                             </p>
@@ -43,31 +43,31 @@ const MonsterCard = ({ name, level, img, loc, health, actionPoints, movementPoin
 
                     <div className={classes.column}>
                         <Tooltip title="Résistance Eau">
-                            <p>
+                            <p className={classes.stats}>
                                 <img alt='' className={classes.picto} src={require('./img/reseau.png')} />
                                 <span className={classes.res}>{reseau}</span>%
                             </p>
                         </Tooltip>
                         <Tooltip title="Résistance Feu">
-                            <p>
+                            <p className={classes.stats}>
                                 <img alt='' className={classes.picto} src={require('./img/resfeu.png')} />
                                 <span className={classes.res}>{resfeu}</span>%
                             </p>
                         </Tooltip>
                         <Tooltip title="Résistance Terre">
-                            <p>
+                            <p className={classes.stats}>
                                 <img alt='' className={classes.picto} src={require('./img/resterre.png')} />
                                 <span className={classes.res}>{resterre}</span>%
                             </p>
                         </Tooltip>
                         <Tooltip title="Résistance Air">
-                            <p>
+                            <p className={classes.stats}>
                                 <img alt='' className={classes.picto} src={require('./img/resair.png')} />
                                 <span className={classes.res}>{resair}</span>%
                             </p>
                         </Tooltip>
                         <Tooltip title="Résistance Neutre">
-                            <p>
+                            <p className={classes.stats}>
                                 <img alt='' className={classes.picto} src={require('./img/resneutre.png')} />
                                 <span className={classes.res}>{resneutre}</span>%
                             </p>

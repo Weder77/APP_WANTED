@@ -55,7 +55,7 @@ const MonstersName = () => {
 
 const MonstersStats = (page, value, classes) => {
   const monsters = ApiCall('/api/monsters')
-  
+
   return (
     monsters.map((monster, index) =>
       <TabPanel value={value} index={index} className={classes.parent}>

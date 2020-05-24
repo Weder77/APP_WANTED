@@ -42,18 +42,16 @@ export default class App extends Component {
           ))}
         </Switch>
 
-        <div style={{ flex: 1, padding: "10px" }}>
-          <Switch>
-            {routes.map((route, index) => (
-              <Route
-                key={index}
-                path={route.path}
-                exact={route.exact}
-                children={<route.main />}
-              />
-            ))}
-          </Switch>
-        </div>
+        <Switch>
+          {routes.map((route, index) => (
+            <Route
+              key={index}
+              path={route.path}
+              exact={route.exact}
+              children={<route.main />}
+            />
+          ))}
+        </Switch>
       </Router >
     );
   }

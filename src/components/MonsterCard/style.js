@@ -1,9 +1,6 @@
 import { makeStyles } from '@material-ui/core/styles';
 
 export const style = makeStyles(theme => ({
-  box: {
-    marginTop: '6%',
-  },
   boxMonsters: {
     width: '100%',
   },
@@ -13,25 +10,12 @@ export const style = makeStyles(theme => ({
   },
   flex: {
     display: 'flex',
-    flex: 'wrap',
   },
   img: {
-    width: '70%',
+    height: '150px'
   },
   localisation: {
     marginBottom: '2%',
-  },
-  root: {
-    flexGrow: 1,
-    backgroundColor: theme.palette.background.paper,
-    display: 'flex',
-    height: 600,
-  },
-  description: {
-    marginBottom: 50,
-  },
-  astuce: {
-
   },
   tabs: {
     borderRight: `1px solid ${theme.palette.divider}`,
@@ -40,8 +24,8 @@ export const style = makeStyles(theme => ({
     fontStyle: 'italic',
   },
   picto: {
-    width: 22,
-    marginRight: 5,
+    height: 19,
+    margin: 5,
   },
   boxRes: {
     width: '100%',
@@ -53,6 +37,7 @@ export const style = makeStyles(theme => ({
     alignItems: 'center',
     textAlign: 'center',
     fontSize: 22,
+    height: 'fit-content',
   },
   carac: {
     display: 'block',
@@ -61,9 +46,12 @@ export const style = makeStyles(theme => ({
     marginRight: 10,
   },
   firstBox: {
-    border: 'solid grey',
-    borderRadius: 20,
-    width: '30%',
+    height: 'fit-content',
   },
-
+  stats: {
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    margin: 5,
+  },
 }));

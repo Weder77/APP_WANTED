@@ -1,28 +1,21 @@
 import { makeStyles } from '@material-ui/core/styles';
 
 export const style = makeStyles(theme => ({
-  
-  description: {
-    marginBottom: 50,
-  },
-  astuce: {
 
-  },
- 
-  bold: {
-    fontWeight: 'bold'
-  },
- 
-  sorts: {
-    marginBottom: 30,
-  },
-
-  secondBox: {
-    padding: 50,
-    textAlign: 'left',
-  },
-
-  title: {
-    textAlign: 'center',
-  }
+    description: {
+        marginTop: 25,
+    },
+    PWidth: {
+        textAlign: "justify",
+    },
+    descriptionBox: {
+        padding: "0 40px",
+        height: 'fit-content',
+        display: 'flex',
+        justifyContent: 'center',
+        flexDirection: 'column',
+    },
+    title: {
+        textAlign: 'center',
+    }
 }));
