@@ -91,6 +91,7 @@ const MonstersStats = (value, classes, request) => {
             resterre={monsters[index].resFeu}
             resair={monsters[index].resEau}
             resneutre={monsters[index].resNeutre}
+            url={monsters[index].url}
           />
           <MonsterDescription
             pos={monsters[index].position}
