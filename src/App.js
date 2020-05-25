@@ -8,7 +8,7 @@ import Hidden from '@material-ui/core/Hidden';
 import Menu from './components/Menu';
 import HomePage from './pages/HomePage';
 import Monsters from './pages/Monsters';
-import AreaMonsters from './pages/ApiTest'
+import AreaMonsters from './pages/AreaMonsters'
 
 
 
