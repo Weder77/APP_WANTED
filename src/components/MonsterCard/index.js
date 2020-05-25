@@ -6,6 +6,12 @@ import Link from '@material-ui/core/Link';
 
 const MonsterCard = ({ name, level, img, loc, health, actionPoints, movementPoints, resfeu, reseau, resterre, resair, resneutre, url }) => {
     const classes = style()
+    let targetUrl = "_blank"
+
+    if(url === "") {
+        url = '#'
+        targetUrl = ''
+    }
 
     if (img.length === 0) {
         img = require('./img/default.png')
@@ -15,7 +21,7 @@ const MonsterCard = ({ name, level, img, loc, health, actionPoints, movementPoin
         <div className={classes.firstBox}>
             <h2>{name} -<span className={classes.level}>lvl {level}</span></h2>
             <div className={classes.boxMonsters}>
-                <Link href={url} target="_blank">
+                <Link href={url} target={targetUrl}>
                     <img alt='' className={classes.img} src={img} />
                 </Link>
                 <div className={classes.localisation}>Localisation : {ApiCall(loc).name} </div>
