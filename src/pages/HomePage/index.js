@@ -50,7 +50,7 @@ const HomePage = () => {
                     </Link>
                 </Grid>
                 <Grid item xs={6}>
-                    <Link to="/dimensions" className={classes.link}>
+                    <Link className={classes.link}>
                         <Paper className={[classes.paper, classes.areaContainer, classes.dim]}>
                             Dimensions divines
                             <div>
@@ -72,7 +72,7 @@ const HomePage = () => {
                     </Link>
                 </Grid>
                 <Grid item xs={6}>
-                    <Link to="/frigost" className={classes.link}>
+                    <Link className={classes.link}>
                         <Paper className={[classes.paper, classes.areaContainer, classes.frigost]}>
                             <div>Frigost</div>
                             <div><Link to="/frigost1" className={classes.link} style={{ 'color': 'white' }}>[-76,-42]</Link> ou <Link to="/frigost2" className={classes.link} style={{ 'color': 'white' }}>[-75,-74]</Link></div>
