@@ -44,7 +44,14 @@ function a11yProps(index) {
 }
 
 const MonstersName = (request) => {
-  const monsters = ApiCall(request)
+  let monsters = []
+  if (typeof (request) === 'object') {
+    for (let i = 0; i < request.length; i++) {
+      monsters.push(ApiCall(request[i]))
+    }
+  } else {
+    monsters = ApiCall(request)
+  }
 
   return (
     monsters.map((monster, index) =>
@@ -54,7 +61,17 @@ const MonstersName = (request) => {
 }
 
 const MonstersStats = (value, classes, request) => {
-  const monsters = ApiCall(request)
+  let monsters = []
+  if (typeof (request) === 'object') {
+    for (let i = 0; i < request.length; i++) {
+      let item = ApiCall(request[i])
+      if(item.length !== 0) {
+        monsters.push(item)
+      }
+    }
+  } else {
+    monsters = ApiCall(request)
+  }
 
   return (
     monsters.map((monster, index) =>
@@ -86,7 +103,7 @@ const MonstersStats = (value, classes, request) => {
   )
 }
 
-const Monsters = ({request, type}) => {
+const Monsters = ({ request }) => {
   const classes = style()
 
   const [value, setValue] = React.useState(0)
@@ -108,7 +125,7 @@ const Monsters = ({request, type}) => {
         >
           {MonstersName(request)}
         </Tabs>
-        {MonstersStats(value, classes,request)}
+        {MonstersStats(value, classes, request)}
       </div>
     </div>
   );

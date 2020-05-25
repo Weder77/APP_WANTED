@@ -1,16 +1,20 @@
 import React from 'react';
 import ApiCall from '../../components/ApiCall'
+import Monsters from '../Monsters'
 
-const ApiTest = ({ request }) => {
-    let tab = ApiCall(request).Monsters
+const AreaMonsters = ({ req }) => {
+    const tab = ApiCall(req).Monsters
 
-    for (let i = 0; i < tab.length; i++) {
-        const element = tab[i];
+    if (tab !== undefined) {
+        return (
+            <Monsters request={tab} />
+        )
+    } else {
+        return (
+            "Loading"
+        )
     }
 
-    return (
-        "test"
-    )
 }
 
-export default ApiTest;
+export default AreaMonsters;
