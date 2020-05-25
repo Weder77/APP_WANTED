@@ -55,5 +55,9 @@ export const style = makeStyles(theme => ({
     },
     saharach: {
         backgroundImage: "linear-gradient(to right bottom,rgba(40, 10, 10, 0.4),rgba(255, 204, 128, 0.4)), url('./saharach.jpg')",
+    },
+    link: {
+        textDecoration: 'none',
+        color: 'inherit'
     }
 }));

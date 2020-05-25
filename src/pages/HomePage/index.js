@@ -17,8 +17,8 @@ const HomePage = () => {
                         <div className={classes.subtextWelcome}>Selectionnez la zone de l'avis souhaité</div>
                     </Paper>
                 </Grid>
-                <Grid item xs={6} className={classes.test}>
-                    <Link to="/astrub" underline="none">
+                <Grid item xs={6}>
+                    <Link to="/astrub" className={classes.link}>
                         <Paper className={[classes.paper, classes.areaContainer, classes.astrub]}>
                             <div>Astrub</div>
                             <div>[5,-19]</div>
@@ -26,15 +26,15 @@ const HomePage = () => {
                     </Link>
                 </Grid>
                 <Grid item xs={6}>
-                    <Link underline="none">
+                    <Link className={classes.link}>
                         <Paper className={[classes.paper, classes.areaContainer, classes.amakna]}>
                             <div>Amakna</div>
-                            <div><Link to="/amakna1" underline="none" style={{ 'color': 'white' }}>[4,4]</Link> ou <Link to="/amakna2" underline="none" style={{ 'color': 'white' }}>[5,-6]</Link></div>
+                            <div><Link to="/amakna1" className={classes.link} style={{ 'color': 'white' }}>[4,4]</Link> ou <Link to="/amakna2" underline="none" style={{ 'color': 'white' }}>[5,-6]</Link></div>
                         </Paper>
                     </Link>
                 </Grid>
                 <Grid item xs={6}>
-                    <Link to="/bonta" underline="none">
+                    <Link to="/bonta" className={classes.link}>
                         <Paper className={[classes.paper, classes.areaContainer, classes.bonta]}>
                             <div>Bonta</div>
                             <div>[-33, -56]</div>
@@ -42,7 +42,7 @@ const HomePage = () => {
                     </Link>
                 </Grid>
                 <Grid item xs={6}>
-                    <Link to="/brakmar" underline="none">
+                    <Link to="/brakmar" className={classes.link}>
                         <Paper className={[classes.paper, classes.areaContainer, classes.brakmar]}>
                             <div>Brâkmar</div>
                             <div>[-26, 36]</div>
@@ -50,21 +50,21 @@ const HomePage = () => {
                     </Link>
                 </Grid>
                 <Grid item xs={6}>
-                    <Link to="/dimensions" underline="none">
+                    <Link to="/dimensions" className={classes.link}>
                         <Paper className={[classes.paper, classes.areaContainer, classes.dim]}>
                             Dimensions divines
                             <div>
-                                <Link to="/enutrosor" underline="none" style={{ 'color': 'white' }}>Enutrosor [-1,-1]</Link>
+                                <Link to="/enutrosor" className={classes.link} style={{ 'color': 'white' }}>Enutrosor [-1,-1]</Link>
                                 , 
-                                <Link to="/srambad" underline="none" style={{ 'color': 'white' }}> Srambad [2,2]</Link>
+                                <Link to="/srambad" className={classes.link} style={{ 'color': 'white' }}> Srambad [2,2]</Link>
                                 , 
-                                <Link to="/xelorium" underline="none" style={{ 'color': 'white' }}> Xelorium [1,6]</Link>
+                                <Link to="/xelorium" className={classes.link} style={{ 'color': 'white' }}> Xelorium [1,6]</Link>
                             </div>
                         </Paper>
                     </Link>
                 </Grid>
                 <Grid item xs={6}>
-                    <Link to="/sufokia" underline="none">
+                    <Link to="/sufokia" className={classes.link}>
                         <Paper className={[classes.paper, classes.areaContainer, classes.sufokia]}>
                             <div>Sufokia</div>
                             <div>[23,24]</div>
@@ -72,15 +72,15 @@ const HomePage = () => {
                     </Link>
                 </Grid>
                 <Grid item xs={6}>
-                    <Link to="/frigost" underline="none">
+                    <Link to="/frigost" className={classes.link}>
                         <Paper className={[classes.paper, classes.areaContainer, classes.frigost]}>
                             <div>Frigost</div>
-                            <div><Link to="/frigost1" underline="none" style={{ 'color': 'white' }}>[-76,-42]</Link> ou <Link to="/frigost2" underline="none" style={{ 'color': 'white' }}>[-75,-74]</Link></div>
+                            <div><Link to="/frigost1" className={classes.link} style={{ 'color': 'white' }}>[-76,-42]</Link> ou <Link to="/frigost2" underline="none" style={{ 'color': 'white' }}>[-75,-74]</Link></div>
                         </Paper>
                     </Link>
                 </Grid>
                 <Grid item xs={6}>
-                    <Link to="/saharach" underline="none">
+                    <Link to="/saharach" className={classes.link}>
                         <Paper className={[classes.paper, classes.areaContainer, classes.saharach]}>
                             <div>Saharach</div>
                             <div>[15,-57]</div>
