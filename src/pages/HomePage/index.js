@@ -29,7 +29,7 @@ const HomePage = () => {
                     <Link className={classes.link}>
                         <Paper className={[classes.paper, classes.areaContainer, classes.amakna]}>
                             <div>Amakna</div>
-                            <div><Link to="/amakna1" className={classes.link} style={{ 'color': 'white' }}>[4,4]</Link> ou <Link to="/amakna2" underline="none" style={{ 'color': 'white' }}>[5,-6]</Link></div>
+                            <div><Link to="/amakna1" className={classes.link} style={{ 'color': 'white' }}>[4,4]</Link> ou <Link to="/amakna2" className={classes.link} style={{ 'color': 'white' }}>[5,-6]</Link></div>
                         </Paper>
                     </Link>
                 </Grid>
@@ -75,7 +75,7 @@ const HomePage = () => {
                     <Link to="/frigost" className={classes.link}>
                         <Paper className={[classes.paper, classes.areaContainer, classes.frigost]}>
                             <div>Frigost</div>
-                            <div><Link to="/frigost1" className={classes.link} style={{ 'color': 'white' }}>[-76,-42]</Link> ou <Link to="/frigost2" underline="none" style={{ 'color': 'white' }}>[-75,-74]</Link></div>
+                            <div><Link to="/frigost1" className={classes.link} style={{ 'color': 'white' }}>[-76,-42]</Link> ou <Link to="/frigost2" className={classes.link} style={{ 'color': 'white' }}>[-75,-74]</Link></div>
                         </Paper>
                     </Link>
                 </Grid>
